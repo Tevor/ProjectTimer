@@ -2,9 +2,15 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+<?php
+    $Counter = new TimeCop(0,0,0,0,40)
+?>
+    <title>Time Display</title>
 </head>
 <body>
-
+    <div>
+        <label>HoursPerWeek:</label>
+        <input type="text" name="hpw" value="<?php echo 5 ?>" /> <br/>
+    </div>
 </body>
 </html>

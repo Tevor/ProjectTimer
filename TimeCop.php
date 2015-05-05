@@ -1,18 +1,39 @@
 <?php
 /**
-  * Author: Trevor
+  * Author: Trevor Street
  * Date: 04/01/2015
  * Time: 19:07
  */
 
+/**
+ * @Class TimeCop
+ * Purpose: A Class that handles the time values for tracking hours worked
+ */
 class TimeCop {
-    private $lapsedTime = 0;
-    private $today = 0;
-    private $weekly = 0;
-    private $banked = 0;
-    private $hoursPerWeek = 0;
+    private $lapsedTime;
+    private $today;
+    private $weekly;
+    private $banked;
+    private $hoursPerWeek;
 
     /**
+     * @param $lapsedTime
+     * @param $today
+     * @param $weekly
+     * @param $banked
+     * @param $hoursPerWeek
+     */
+    public function __construct($lapsedTime, $today, $weekly, $banked, $hoursPerWeek)
+    {
+        $this->lapsedTime = $lapsedTime;
+        $this->today = $today;
+        $this->weekly = $weekly;
+        $this->banked = $banked;
+        $this->hoursPerWeek = $hoursPerWeek;
+    }
+
+    /**
+     * Method: getLapsedTime
      * @return int
      */
     public function getlapsedTime()
@@ -23,7 +44,7 @@ class TimeCop {
     /**
      * @param int $lapsed_time
      */
-    public function setlapsedTime($lapsed_time)
+    public function setLapsedTime($lapsed_time)
     {
         $this->lapsedTime = $lapsed_time;
     }
@@ -41,7 +62,7 @@ class TimeCop {
      */
     public function setHoursWeek($hours_week)
     {
-        $this->hoursPerWeekeek = $hours_week;
+        $this->hoursPerWeek = $hours_week;
     }
 
     /**
